@@ -7,6 +7,13 @@ Meetup: http://www.meetup.com/Programming-Book-Club-Toronto/events/227066386/
 
 Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toronto
 
+# Part 1
+
+- Organize small functional programs
+- Define purely functional data structures
+- Handle errors
+- Deal with state
+
 ## Chapter 1
 
 - What is functional programming?
