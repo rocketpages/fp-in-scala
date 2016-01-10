@@ -1,7 +1,7 @@
 import org.scalatest.FunSuite
 import org.fpbct.chapter1._
 
-class CafeSuite extends FunSuite {
+class Chapter1Suite extends FunSuite {
   test("Cafe.buyCoffee() charge equals price of coffee") {
     val cafe = new Cafe()
     val cc = new CreditCard()
