@@ -3,6 +3,8 @@
 
 These are my notes and exercises from the book Functional Programming in Scala as part of the series hosted by Programming Book Club Toronto.
 
+Book: http://www.amazon.ca/Functional-Programming-Scala-Paul-Chiusano/dp/1617290653
+
 Meetup: http://www.meetup.com/Programming-Book-Club-Toronto/events/227066386/
 
 Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toronto
@@ -48,6 +50,7 @@ Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toro
 - HOF (higher order functions)
   - monomorphic
   - polymorphic
+- Critical to understand *partial application on page 26* before moving on to further chapters
 
 ### Scala
 - all expressions produce a result
