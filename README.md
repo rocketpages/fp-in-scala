@@ -65,25 +65,33 @@ Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toro
   - 1 is a parameter
   - get comfortable with thinking in terms of combining functions
 
+### Functional loops
+
+- use inner function, called *go* or *loop* by definition
+- the arguments to *go* are the state of the loop
+- to exit the loop we return a value without calling go
+- to continue the loop we pass the current state and invoke go again
+- Scala optimizes this using *tail call elimination* if the call to the recursive function is the last thing to do
+
 ### HOF (higher order functions)
 - functions are values
 - pass functions to functions
+- HOFs are so general that we use short variable names (e.g, f, g, h), because we don't know what they are aside from type
+- monomorphic HOFs are only for a single type (e.g, Int)
+- polymorphic HOFs are useful for *any* type
 
 ### Anonymous functions & function literals
 
 - => is a keyword for function literals/anonymous functions
 - Heavily used rather for inlining of code when defining polymorphic HOFs
-
-### Challenges
-  
-- Very difficult to think in terms of types coming from a Java background, for instance...
+- "Following the types" is the most difficult thing to get used to so far
+- Difficut to shake an imperative mindset, that a program is a series of instructions executed in order
+  - I found myself struggling to put "order" to the implementation of curry
 
 ```scala
 // the implementation of the body below is not obvious (dense syntax)
 def curry[A, B, C](f: (A, B) => C): A => (B => C) = ???
 ```
-
-- Very important to learn how to "follow the types", but difficut to shake an imperative mindset
 
 ### Examples
 
