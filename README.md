@@ -3,11 +3,9 @@
 
 These are my notes and exercises from the book Functional Programming in Scala as part of the series hosted by Programming Book Club Toronto.
 
-Book: http://www.amazon.ca/Functional-Programming-Scala-Paul-Chiusano/dp/1617290653
-
-Meetup: http://www.meetup.com/Programming-Book-Club-Toronto/events/227066386/
-
-Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toronto
+- Book: http://www.amazon.ca/Functional-Programming-Scala-Paul-Chiusano/dp/1617290653
+- Meetup: http://www.meetup.com/Programming-Book-Club-Toronto/events/227066386/
+- Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toronto
 
 # Part 1
 
