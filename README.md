@@ -50,9 +50,9 @@ Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toro
   - polymorphic
 
 ### Scala
-  - all expressions produce a result
-  - no return keyword needed
-  - Unit is similar to void
+- all expressions produce a result
+- no return keyword needed
+- Unit is similar to void
 - sbt
   - the build tool of Scala
 - compilation
