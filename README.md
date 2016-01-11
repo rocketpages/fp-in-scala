@@ -40,3 +40,34 @@ Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toro
   - groupBy
   - reduce
   - map
+
+## Chapter 2
+
+### Anonymous functions & function literals
+
+- => is a keyword for function literals/anonymous functions
+- Heavily used rather for inlining of code when defining polymorphic HOFs
+
+### Challenges
+  
+- Very difficult to think in terms of types coming from a Java background, for instance...
+
+```scala
+// the implementation of the body below is not obvious (dense syntax)
+def curry[A, B, C](f: (A, B) => C): A => (B => C) = ???
+```
+
+- Very important to learn how to "follow the types", but difficut to shake an imperative mindset
+
+### Examples
+
+- Function literal syntax is the most important takeaway from the chapter
+- Much more difficult than HOFs
+
+```scala
+// a function signature that takes a B and returns a C ... anonymous function syntax 
+B => C 
+
+// a function signature that takes an A and returns a function that takes a B and returns a C
+A => (B => C)
+```
