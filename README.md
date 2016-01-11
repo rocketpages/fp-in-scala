@@ -43,6 +43,32 @@ Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toro
 
 ## Chapter 2
 
+- Unlearn: most of us are used to thinking of a program as a series of instructions that has an effect
+- FP is all about input, output, types; not order of execution and side effects
+- HOF (higher order functions)
+  - monomorphic
+  - polymorphic
+
+### Scala
+  - all expressions produce a result
+  - no return keyword needed
+  - Unit is similar to void
+- sbt
+  - the build tool of Scala
+- compilation
+  - Scala is typically compiled
+  - source file can also be supplied to the interpreter directly, useful for scripting
+- Scala REPL is your friend, learn it well!
+- 2 + 1 is just syntactic sugar, it's the same as 2.+(1)
+  - 2 is an object
+  - + is a method on 2
+  - 1 is a parameter
+  - get comfortable with thinking in terms of combining functions
+
+### HOF (higher order functions)
+- functions are values
+- pass functions to functions
+
 ### Anonymous functions & function literals
 
 - => is a keyword for function literals/anonymous functions
