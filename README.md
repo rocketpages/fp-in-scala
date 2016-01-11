@@ -78,7 +78,9 @@ Google Group: https://groups.google.com/forum/#!forum/programming-book-club-toro
 - pass functions to functions
 - HOFs are so general that we use short variable names (e.g, f, g, h), because we don't know what they are aside from type
 - monomorphic HOFs are only for a single type (e.g, Int)
-- polymorphic HOFs are useful for *any* type
+- polymorphic (generic) functions are useful for *any* type
+  - we need *type parameters* like `def FindFirst[A, B, C](a: A, b: B, c: C)` for generic functions
+
 
 ### Anonymous functions & function literals
 
@@ -95,13 +97,20 @@ def curry[A, B, C](f: (A, B) => C): A => (B => C) = ???
 
 ### Examples
 
-- Function literal syntax is the most important takeaway from the chapter
-- Much more difficult than HOFs
-
 ```scala
 // a function signature that takes a B and returns a C ... anonymous function syntax 
 B => C 
 
 // a function signature that takes an A and returns a function that takes a B and returns a C
 A => (B => C)
+
+// a more complete anonymous function example
+findFirst(Array(1, 5, 9, 12), (x: Int) => x == 9)
+
+//syntactic sugar for object creation
+(a, b) => a < b // is the same as below
+
+val lessThan = new Function2[Int, Int, Boolean] { // Function2 takes two inputs and one output
+  def apply(a: Int, b: Int) = a < b // construct this new object in order to compute the Boolean
+}
 ```
