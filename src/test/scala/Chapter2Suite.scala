@@ -1,4 +1,5 @@
 import org.fpbct.chapter2._
+import org.fpbct.chapter2.HigherOrderFunctions._
 import org.scalatest.FunSuite
 
 class Chapter2Suite extends FunSuite {
@@ -73,19 +74,24 @@ class Chapter2Suite extends FunSuite {
     assert(HigherOrderFunctions.isSorted(a, HigherOrderFunctions.descending) == false)
   }
 
-  test("HigherOrderFunctions.curry() create a string appender") {
+  test("HigherOrderFunctions.curry() blend two things together by currying with monomorphic higher order function") {
     def blend(a: String, b: String) = a + " blended with " + b
-    val x = HigherOrderFunctions.curry(blend)("apple")
-    val word = x("orange")
-    val word2 = x("mango")
+    val x = curry(blend)
+    assert("apple blended with orange" == x("apple")("orange"))
   }
 
-  test("HigherOrderFunctions.compose() composed function values are correct") {
+  test("HigherOrderFunctions.curry() blend two things together by currying with polymorphic function") {
+    def blend[A, B](a: A, b: B) = a + " blended with " + b
+    val x = curry(blend)("apple")(14)
+    assert("apple blended with 14" == x)
+  }
+
+  test("HigherOrderFunctions.compose() composed functions to demonstrate chaining") {
     def double(num: Int): Int = num * 2
     def add3(num: Int): Int = num + 3
     def sub2(num: Int): Int = num - 2
 
-    val doubleAdd3Sub2 = HigherOrderFunctions.compose(sub2, HigherOrderFunctions.compose(add3, double))
+    val doubleAdd3Sub2 = compose(sub2, compose(add3, double))
 
     // first element in the list should be 3
     val xs = List(1, 2, 3).map(doubleAdd3Sub2)
