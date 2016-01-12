@@ -16,7 +16,10 @@ class Cafe {
 
   def coalesce(charges: List[Charge]): List[Charge] = {
     // TODO: discuss how groupBy works
-    charges.groupBy(_.cc).values.map(_.reduce(_ combine _)).toList
+    charges.groupBy(_.cc)
+      .values
+      .map(_.reduce(_ combine _))
+      .toList
   }
 }
 

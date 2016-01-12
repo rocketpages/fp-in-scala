@@ -73,11 +73,24 @@ class Chapter2Suite extends FunSuite {
     assert(HigherOrderFunctions.isSorted(a, HigherOrderFunctions.descending) == false)
   }
 
-  test("HigherOrderFunctions.curry()") {
-    assert(false)
+  test("HigherOrderFunctions.curry() create a string appender") {
+    def blend(a: String, b: String) = a + " blended with " + b
+    val x = HigherOrderFunctions.curry(blend)("apple")
+    val word = x("orange")
+    val word2 = x("mango")
   }
 
-  test("HigherOrderFunctions.compose()") {
-    assert(false)
+  test("HigherOrderFunctions.compose() composed function values are correct") {
+    def double(num: Int): Int = num * 2
+    def add3(num: Int): Int = num + 3
+    def sub2(num: Int): Int = num - 2
+
+    val doubleAdd3Sub2 = HigherOrderFunctions.compose(sub2, HigherOrderFunctions.compose(add3, double))
+
+    // first element in the list should be 3
+    val xs = List(1, 2, 3).map(doubleAdd3Sub2)
+    assert(xs(0) == 3)
+    assert(xs(1) == 5)
+    assert(xs(2) == 7)
   }
 }
